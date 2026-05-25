@@ -1,0 +1,122 @@
+[
+  {
+    "type": "rors",
+    "nameDe": "Der Aufstieg des Roten Schädels",
+    "nameEn": "The Rise of Red Skull",
+    "scenarios": [
+      { "de": "Crossbones",          "en": "Crossbones"    },
+      { "de": "M.O.D.O.K.",          "en": "M.O.D.O.K."    },
+      { "de": "Absorbing Man",       "en": "Absorbing Man" },
+      { "de": "Taskmaster",          "en": "Taskmaster"    },
+      { "de": "Zola",                "en": "Zola"          },
+      { "de": "Roter Schädel",       "en": "Red Skull"     }
+    ],
+    "logItems": [
+      { "key": "rors_serum",       "de": "Super-Soldat-Serum gestohlen", "en": "Super-Soldier Serum stolen" },
+      { "key": "rors_researcher",  "de": "Forscher befreit",             "en": "Researcher freed"           },
+      { "key": "rors_bunker",      "de": "Bunker zerstört",              "en": "Bunker destroyed"           }
+    ]
+  },
+  {
+    "type": "gmw",
+    "nameDe": "Gesucht im ganzen Universum",
+    "nameEn": "Galaxy's Most Wanted",
+    "scenarios": [
+      { "de": "Flucht aus dem Museum",       "en": "Escape from the Museum"   },
+      { "de": "Knowhere",                    "en": "Knowhere"                  },
+      { "de": "Der Tresor des Sammlers",     "en": "The Collector's Vault"     },
+      { "de": "Der Kraftstein",              "en": "The Power Stone"           },
+      { "de": "Knowhere (Teil 2)",           "en": "Knowhere (Part 2)"         }
+    ],
+    "logItems": [
+      { "key": "gmw_power_stone",  "de": "Kraftstein gesichert",   "en": "Power Stone secured"  },
+      { "key": "gmw_ransom",       "de": "Lösegeld bezahlt",        "en": "Ransom paid"           },
+      { "key": "gmw_collector",    "de": "Sammler entkommen",       "en": "Collector escaped"     }
+    ]
+  },
+  {
+    "type": "mts",
+    "nameDe": "Im Schatten des Titanen",
+    "nameEn": "Mad Titan's Shadow",
+    "scenarios": [
+      { "de": "Der ewige Kang",                    "en": "The Once and Future Kang"       },
+      { "de": "Im Lauf der Zeit",                  "en": "Rock of Ages"                   },
+      { "de": "Die Vergangenheit ist Prolog",       "en": "What is Past is Prologue"       },
+      { "de": "Städtische Panik",                  "en": "Municipal Panic"                },
+      { "de": "Altar des Todes",                   "en": "Altar of Death"                 }
+    ],
+    "logItems": [
+      { "key": "mts_time",     "de": "Zeitstein in Thanos' Besitz",        "en": "Time Stone in Thanos' possession"     },
+      { "key": "mts_soul",     "de": "Seelenstein in Thanos' Besitz",      "en": "Soul Stone in Thanos' possession"     },
+      { "key": "mts_reality",  "de": "Realitätsstein in Thanos' Besitz",   "en": "Reality Stone in Thanos' possession"  },
+      { "key": "mts_space",    "de": "Raumstein in Thanos' Besitz",        "en": "Space Stone in Thanos' possession"    }
+    ]
+  },
+  {
+    "type": "sm",
+    "nameDe": "Sinistre Motive",
+    "nameEn": "Sinister Motives",
+    "scenarios": [
+      { "de": "Der Sandmann kommt",    "en": "The Sandman Cometh"    },
+      { "de": "Mysterios Illusionen",  "en": "Mysterio's Illusions"  },
+      { "de": "Die Sinister Six",      "en": "The Sinister Six"      },
+      { "de": "Venom",                 "en": "Venom"                 },
+      { "de": "Carnage",               "en": "Carnage"               }
+    ],
+    "logItems": [
+      { "key": "sm_formula",   "de": "Formel gestohlen",           "en": "Formula stolen"            },
+      { "key": "sm_symbiote",  "de": "Symbiotenprobe entwendet",   "en": "Symbiote sample taken"     },
+      { "key": "sm_city",      "de": "New York unter Kontrolle",   "en": "New York under control"    }
+    ]
+  },
+  {
+    "type": "mg",
+    "nameDe": "Mutanten-Genesis",
+    "nameEn": "Mutant Genesis",
+    "scenarios": [
+      { "de": "Sabretooth",            "en": "Sabretooth"           },
+      { "de": "Projekt Weitwache",     "en": "Project Wideawake"    },
+      { "de": "Der Juggernaut",        "en": "The Juggernaut"       },
+      { "de": "Erste Klasse",          "en": "First Class"          },
+      { "de": "Magneto",               "en": "Magneto"              }
+    ],
+    "logItems": [
+      { "key": "mg_sentinel",    "de": "Sentinel-Programm aktiv",       "en": "Sentinel program active"    },
+      { "key": "mg_brotherhood", "de": "Bruderschaft verstärkt",         "en": "Brotherhood reinforced"     },
+      { "key": "mg_xavier",      "de": "Xavier-Institut beschädigt",     "en": "Xavier Institute damaged"   }
+    ]
+  },
+  {
+    "type": "ne",
+    "nameDe": "Next Evolution",
+    "nameEn": "Next Evolution",
+    "scenarios": [],
+    "logItems": []
+  },
+  {
+    "type": "aoa",
+    "nameDe": "Age of Apocalypse",
+    "nameEn": "Age of Apocalypse",
+    "scenarios": [
+      { "de": "Die Verlassenen und Ausgestoßenen",  "en": "The Abandoned and Outcast"  },
+      { "de": "Kaskade der Konsequenzen",           "en": "Cascade of Consequences"   },
+      { "de": "Krieg um Erlösung",                  "en": "War for Salvation"          },
+      { "de": "Apocalypse",                         "en": "Apocalypse"                 }
+    ],
+    "logItems": []
+  },
+  {
+    "type": "aos",
+    "nameDe": "Age of Omens",
+    "nameEn": "Age of Omens",
+    "scenarios": [],
+    "logItems": []
+  },
+  {
+    "type": "cw",
+    "nameDe": "Civil War",
+    "nameEn": "Civil War",
+    "scenarios": [],
+    "logItems": []
+  }
+]
