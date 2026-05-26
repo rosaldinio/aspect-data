@@ -1,0 +1,28 @@
+name: Monitor – Neue Szenarien
+
+on:
+  schedule:
+    # Täglich um 08:00 UTC (10:00 MEZ / 09:00 MESZ)
+    - cron: "0 8 * * *"
+  workflow_dispatch:  # Manuell auslösbar (z.B. zum Testen)
+
+jobs:
+  check:
+    name: Marvelcdb auf neue Packs prüfen
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python setup
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Neue Szenarien prüfen
+        id: check
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 scripts/check_scenarios.py
