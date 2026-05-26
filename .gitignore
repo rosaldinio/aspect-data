@@ -1,0 +1,38 @@
+# IDE
+.idea/
+.vscode/
+
+# Claude Code
+.claude/settings.local.json
+
+# React Native / Expo app (lives in temp_init submodule)
+temp_init/
+temp_init_backup_*/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Screenshots and debug images
+*.png
+*.jpg
+*.jpeg
+
+# Database files
+*.db
+*.sqlite
+
+# Generated files
+gen_icon.py
+gen_splash.py
+
+# Misc
+github-pages/
+docs/
+Prompts/
+CLAUDE.md
+*.xml
+ui.xml
+ui2.xml
+ui_menu.xml

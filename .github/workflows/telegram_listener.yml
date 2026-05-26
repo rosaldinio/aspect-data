@@ -1,0 +1,30 @@
+name: Telegram – Bot Listener
+
+on:
+  schedule:
+    # Alle 5 Minuten prüfen ob /update geschrieben wurde
+    # (GitHub Actions Minimum: 5 Min.)
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+jobs:
+  listen:
+    name: Telegram auf /update prüfen
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python setup
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Telegram-Nachrichten prüfen
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPO: ${{ github.repository }}
+        run: python3 scripts/telegram_listener.py

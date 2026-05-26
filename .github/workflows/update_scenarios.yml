@@ -1,0 +1,37 @@
+name: Update – scenarios.json aktualisieren
+
+on:
+  workflow_dispatch:  # Manuell per Telegram-Bot oder GitHub UI auslösbar
+
+jobs:
+  update:
+    name: Neue Szenarien einpflegen und pushen
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write  # Für den Git-Commit
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python setup
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: scenarios.json aktualisieren
+        id: update
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 scripts/update_scenarios.py
+
+      - name: Commit und Push (nur wenn Änderungen)
+        if: steps.update.outputs.changes_made == 'true'
+        run: |
+          git config user.name "Aspect Bot"
+          git config user.email "bot@aspect-app.de"
+          git add github-pages/data/scenarios.json
+          git commit -m "chore: neue Szenarien von marvelcdb.com (${{ steps.update.outputs.new_count }} neu)"
+          git push
