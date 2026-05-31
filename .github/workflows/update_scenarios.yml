@@ -32,7 +32,6 @@ jobs:
         run: |
           git config user.name "Aspect Bot"
           git config user.email "bot@aspect-app.de"
-          cp data/scenarios.json github-pages/data/scenarios.json
-          git add data/scenarios.json github-pages/data/scenarios.json
+          git add data/scenarios.json
           git commit -m "chore: neue Szenarien von marvelcdb.com (${{ steps.update.outputs.new_count }} neu)"
           git push
