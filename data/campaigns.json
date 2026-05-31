@@ -39,11 +39,11 @@
     "nameDe": "Im Schatten des Titanen",
     "nameEn": "Mad Titan's Shadow",
     "scenarios": [
-      { "de": "Der ewige Kang",                    "en": "The Once and Future Kang"       },
-      { "de": "Im Lauf der Zeit",                  "en": "Rock of Ages"                   },
-      { "de": "Die Vergangenheit ist Prolog",       "en": "What is Past is Prologue"       },
-      { "de": "Städtische Panik",                  "en": "Municipal Panic"                },
-      { "de": "Altar des Todes",                   "en": "Altar of Death"                 }
+      { "de": "Ebony Maw",    "en": "Ebony Maw"    },
+      { "de": "Tower Defense", "en": "Tower Defense" },
+      { "de": "Thanos",        "en": "Thanos"        },
+      { "de": "Hela",          "en": "Hela"          },
+      { "de": "Loki",          "en": "Loki"          }
     ],
     "logItems": [
       { "key": "mts_time",     "de": "Zeitstein in Thanos' Besitz",        "en": "Time Stone in Thanos' possession"     },
@@ -76,8 +76,8 @@
     "scenarios": [
       { "de": "Sabretooth",            "en": "Sabretooth"           },
       { "de": "Projekt Weitwache",     "en": "Project Wideawake"    },
-      { "de": "Der Juggernaut",        "en": "The Juggernaut"       },
-      { "de": "Erste Klasse",          "en": "First Class"          },
+      { "de": "Master Mold",          "en": "Master Mold"         },
+      { "de": "Mansion Attack",       "en": "Mansion Attack"      },
       { "de": "Magneto",               "en": "Magneto"              }
     ],
     "logItems": [
