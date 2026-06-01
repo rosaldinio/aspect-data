@@ -22,11 +22,11 @@
     "nameDe": "Gesucht im ganzen Universum",
     "nameEn": "Galaxy's Most Wanted",
     "scenarios": [
-      { "de": "Flucht aus dem Museum",       "en": "Escape from the Museum"   },
-      { "de": "Knowhere",                    "en": "Knowhere"                  },
-      { "de": "Der Tresor des Sammlers",     "en": "The Collector's Vault"     },
-      { "de": "Der Kraftstein",              "en": "The Power Stone"           },
-      { "de": "Knowhere (Teil 2)",           "en": "Knowhere (Part 2)"         }
+      { "de": "Bruderschaft der Badoon",     "en": "Brotherhood of Badoon"     },
+      { "de": "Infiltriere das Museum",      "en": "Infiltrate the Museum"     },
+      { "de": "Flucht aus dem Museum",       "en": "Escape the Museum"         },
+      { "de": "Nebula",                      "en": "Nebula"                    },
+      { "de": "Ronan der Ankläger",          "en": "Ronan the Accuser"         }
     ],
     "logItems": [
       { "key": "gmw_power_stone",  "de": "Kraftstein gesichert",   "en": "Power Stone secured"  },
