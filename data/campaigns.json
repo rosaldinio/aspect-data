@@ -57,11 +57,11 @@
     "nameDe": "Sinistre Motive",
     "nameEn": "Sinister Motives",
     "scenarios": [
-      { "de": "Der Sandmann kommt",    "en": "The Sandman Cometh"    },
-      { "de": "Mysterios Illusionen",  "en": "Mysterio's Illusions"  },
-      { "de": "Die Sinister Six",      "en": "The Sinister Six"      },
+      { "de": "Sandmann",              "en": "Sandman"               },
       { "de": "Venom",                 "en": "Venom"                 },
-      { "de": "Carnage",               "en": "Carnage"               }
+      { "de": "Mysterio",              "en": "Mysterio"              },
+      { "de": "Die Sinister Six",      "en": "The Sinister Six"      },
+      { "de": "Venom Goblin",          "en": "Venom Goblin"          }
     ],
     "logItems": [
       { "key": "sm_formula",   "de": "Formel gestohlen",           "en": "Formula stolen"            },
