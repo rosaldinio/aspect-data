@@ -88,9 +88,15 @@
   },
   {
     "type": "ne",
-    "nameDe": "Next Evolution",
-    "nameEn": "Next Evolution",
-    "scenarios": [],
+    "nameDe": "NeXt Evolution",
+    "nameEn": "NeXt Evolution",
+    "scenarios": [
+      { "de": "Morlock Siege",   "en": "Morlock Siege"   },
+      { "de": "On the Run",      "en": "On the Run"      },
+      { "de": "Juggernaut",      "en": "Juggernaut"      },
+      { "de": "Mister Sinister", "en": "Mister Sinister" },
+      { "de": "Stryfe",          "en": "Stryfe"          }
+    ],
     "logItems": []
   },
   {
@@ -107,16 +113,27 @@
   },
   {
     "type": "aos",
-    "nameDe": "Age of Omens",
-    "nameEn": "Age of Omens",
-    "scenarios": [],
+    "nameDe": "Agents of S.H.I.E.L.D.",
+    "nameEn": "Agents of S.H.I.E.L.D.",
+    "scenarios": [
+      { "de": "Black Widow", "en": "Black Widow" },
+      { "de": "Batroc",      "en": "Batroc"      },
+      { "de": "M.O.D.O.K.",  "en": "M.O.D.O.K."  },
+      { "de": "Citizen V",   "en": "Citizen V"   },
+      { "de": "Baron Zemo",  "en": "Baron Zemo"  }
+    ],
     "logItems": []
   },
   {
     "type": "cw",
     "nameDe": "Civil War",
     "nameEn": "Civil War",
-    "scenarios": [],
+    "scenarios": [
+      { "de": "Iron Man",        "en": "Iron Man"        },
+      { "de": "Captain Marvel",  "en": "Captain Marvel"  },
+      { "de": "Captain America", "en": "Captain America" },
+      { "de": "Spider-Woman",    "en": "Spider-Woman"    }
+    ],
     "logItems": []
   }
 ]
