@@ -27,8 +27,22 @@
   { "pack": "Mutant Genesis",         "name": "Master Mold",                  "sort": 92 },
   { "pack": "Mutant Genesis",         "name": "Mansion Attack",               "sort": 93 },
   { "pack": "Mutant Genesis",         "name": "Magneto",                      "sort": 94 },
+  { "pack": "NeXt Evolution",         "name": "Morlock Siege",                "sort": 95 },
+  { "pack": "NeXt Evolution",         "name": "On the Run",                   "sort": 96 },
+  { "pack": "NeXt Evolution",         "name": "Juggernaut",                   "sort": 97 },
+  { "pack": "NeXt Evolution",         "name": "Mister Sinister",              "sort": 98 },
+  { "pack": "NeXt Evolution",         "name": "Stryfe",                       "sort": 99 },
   { "pack": "Age of Apocalypse",      "name": "The Abandoned and Outcast",    "sort": 100 },
   { "pack": "Age of Apocalypse",      "name": "Cascade of Consequences",      "sort": 101 },
   { "pack": "Age of Apocalypse",      "name": "War for Salvation",            "sort": 102 },
-  { "pack": "Age of Apocalypse",      "name": "Apocalypse",                   "sort": 103 }
+  { "pack": "Age of Apocalypse",      "name": "Apocalypse",                   "sort": 103 },
+  { "pack": "Agents of S.H.I.E.L.D.","name": "Black Widow",                  "sort": 105 },
+  { "pack": "Agents of S.H.I.E.L.D.","name": "Batroc",                       "sort": 106 },
+  { "pack": "Agents of S.H.I.E.L.D.","name": "M.O.D.O.K.",                   "sort": 107 },
+  { "pack": "Agents of S.H.I.E.L.D.","name": "Citizen V",                    "sort": 108 },
+  { "pack": "Agents of S.H.I.E.L.D.","name": "Baron Zemo",                   "sort": 109 },
+  { "pack": "Civil War",              "name": "Iron Man",                     "sort": 110 },
+  { "pack": "Civil War",              "name": "Captain Marvel",               "sort": 111 },
+  { "pack": "Civil War",              "name": "Captain America",              "sort": 112 },
+  { "pack": "Civil War",              "name": "Spider-Woman",                 "sort": 113 }
 ]
