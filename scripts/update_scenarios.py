@@ -1,13 +1,25 @@
 #!/usr/bin/env python3
 """
-Fetches the latest scenario packs from marvelcdb.com, merges any new entries
-into scenarios.json, and writes the updated file. The GitHub Actions update
+Fetches the latest scenario/campaign packs from marvelcdb.com and adds a
+placeholder entry per new pack to scenarios.json. The GitHub Actions update
 workflow commits and pushes the result.
 
-Scenario name mapping: marvelcdb's /packs/ endpoint provides pack names but
-not individual scenario names. For multi-scenario packs (e.g. campaign boxes)
-we fetch scenario cards (type_code=villain) from /api/public/cards/?pack_code=X
-to get the actual encounter set / scenario names.
+marvelcdb's public API cannot give us real per-scenario names automatically:
+- The /packs/ endpoint has no pack_type_code field (confirmed empirically —
+  0 of 61 packs have it), so pack "type" can't be read from the API at all.
+- /api/public/cards/?pack_code=X ignores the pack_code filter entirely and
+  returns the whole card database regardless of the parameter.
+- The public cards API exposes no type_code == "villain" cards whatsoever
+  (0 of 2086 cards across the whole database) — villain/main-scheme identity
+  cards simply aren't in the public dataset.
+So every new pack gets ONE placeholder entry named after the pack. A human
+must split multi-scenario campaign boxes into their real scenario names
+afterward (this is what happened for GMW previously — see project history).
+
+Which pack codes need a scenario entry at all is a judgment call marvelcdb's
+API can't answer (hero packs normally don't have their own villain; campaign
+boxes and standalone scenario packs do) — mirrors the app's own
+pack-categories.ts classification. Keep in sync if that list changes.
 """
 
 import json
@@ -16,9 +28,15 @@ import sys
 import urllib.request
 
 MARVELCDB_PACKS_URL = "https://marvelcdb.com/api/public/packs/"
-MARVELCDB_CARDS_URL = "https://marvelcdb.com/api/public/cards/"
 SCENARIOS_PATH = "data/scenarios.json"
-KNOWN_SCENARIO_PACK_TYPES = {"villain", "campaign"}
+
+# Mirrors CAMPAIGN_BOX_CODES + SCENARIO_PACK_CODES in
+# temp_init/src/features/collection/data/pack-categories.ts, plus 'core'.
+SCENARIO_RELEVANT_CODES = {
+    "core",
+    "trors", "gmw", "mts", "sm", "mut_gen", "next_evol", "aoa", "aos", "cw", "fne",
+    "gob", "twc", "ron", "toafk", "hood", "mojo", "tt", "synthezoid",
+}
 
 
 def send_telegram(token: str, chat_id: str, message: str) -> None:
