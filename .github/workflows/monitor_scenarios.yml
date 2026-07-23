@@ -30,11 +30,18 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python3 scripts/check_scenarios.py
 
-      - name: Commit und Push (nur wenn neue Packs gefunden)
-        if: steps.check.outputs.state_changed == 'true'
+      - name: Spoiler-Fortschritt beobachteter Packs prüfen
+        id: spoiler
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 scripts/check_spoiler_progress.py
+
+      - name: Commit und Push (nur wenn sich etwas geändert hat)
+        if: steps.check.outputs.state_changed == 'true' || steps.spoiler.outputs.state_changed == 'true'
         run: |
           git config user.name "Aspect Bot"
           git config user.email "bot@aspect-app.de"
-          git add data/known_packs.json
-          git commit -m "chore: known_packs.json aktualisiert (${{ steps.check.outputs.new_pack_count }} neue Packs erkannt)"
+          git add data/known_packs.json data/spoiler_progress.json
+          git commit -m "chore: Monitor-Status aktualisiert" || exit 0
           git push
