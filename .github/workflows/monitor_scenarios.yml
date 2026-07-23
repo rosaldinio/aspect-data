@@ -11,6 +11,9 @@ jobs:
     name: Marvelcdb auf neue Packs prüfen
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write  # Für den Git-Commit von known_packs.json
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -26,3 +29,12 @@ jobs:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python3 scripts/check_scenarios.py
+
+      - name: Commit und Push (nur wenn neue Packs gefunden)
+        if: steps.check.outputs.state_changed == 'true'
+        run: |
+          git config user.name "Aspect Bot"
+          git config user.email "bot@aspect-app.de"
+          git add data/known_packs.json
+          git commit -m "chore: known_packs.json aktualisiert (${{ steps.check.outputs.new_pack_count }} neue Packs erkannt)"
+          git push
